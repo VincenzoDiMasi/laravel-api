@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     use HasFactory;
+
+    protected $with = ['technologies', 'type'];
     protected $fillable = ['title', 'image', 'description', 'project_link', 'techonologies_used'];
 
     public function type()
